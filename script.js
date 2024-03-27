@@ -1,35 +1,60 @@
+// 
+
+
+
+Today
+
+Team Acciojob  to  You (direct message) 15:29
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- the entire body must be written by student -->
+	<h1>Login Form</h1>
+	<form onsubmit="handleSubmit()">
+		<label for="username">Username:</label>
+	<input placeholder="Username" id="username" type="text"/>
+		<label for="password">Password:</label>
+		
+	<input placeholder="password" id="password" type="password"/>
+	<input id="checkbox" type="checkbox"/>
+	<label for="checkbox">Remember me:</label>
+	<input id="submit" type="submit" value="Submit" />
+	<button id="existing" type="submit"  hidden >Login as existing user</button>
+	</form>
+    <script type="text/javascript" src="./script.js">
+</script>
+</body>
+</html>
+Messages addressed to "Meeting Group Chat" will also appear in the meeting group chat in Team Chat
+
+Team Acciojob  to  You (direct message) 15:30
 //your JS code here. If required.
-// Check if there are saved details in local storage
-const savedUsername = localStorage.getItem('username');
-const savedPassword = localStorage.getItem('password');
-
-if (savedUsername && savedPassword) {
-    const existingButton = document.createElement('button');
-    existingButton.id = 'existing';
-    existingButton.textContent = 'Login as existing user';
-    document.body.appendChild(existingButton);
-
-    existingButton.addEventListener('click', () => {
-        alert('Logged in as ' + savedUsername);
-    });
+const username=document.getElementById("username");
+const password=document.getElementById("password");
+const remember=document.getElementById("checkbox");
+const existingBtn=document.getElementById("existing");
+const btn=document.getElementById("submit");
+function handleSubmit() {
+	this.event.preventDefault();
+	if (remember.checked) {
+		localStorage.setItem("username",username.value)
+		localStorage.setItem("password",password.value);	
+	}else {
+		localStorage.removeItem("username")
+		localStorage.removeItem("password");		
+	}
+	const alreadyUser=localStorage.getItem("username");
+	const alreadyPassword=localStorage.getItem("password");
+	console.log(alreadyPassword,alreadyUser,remember.checked)
+if (alreadyPassword && alreadyUser) {
+	existingBtn.hidden=false;
+	
+}else{
+	existingBtn.hidden=true;
 }
-
-// Event listener for form submission
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const rememberMe = document.getElementById('checkbox').checked;
-
-    if (rememberMe) {
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-    } else {
-        localStorage.removeItem('username');
-        localStorage.removeItem('password');
-    }
-
-    alert('Logged in as ' + username);
-});
-
+	
+	alert("Logged in as username");
+}
