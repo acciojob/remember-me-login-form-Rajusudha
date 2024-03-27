@@ -6,9 +6,9 @@
 
 // Team Acciojob  to  You (direct message) 15:29
 
-Messages addressed to "Meeting Group Chat" will also appear in the meeting group chat in Team Chat
+// Messages addressed to "Meeting Group Chat" will also appear in the meeting group chat in Team Chat
 
-Team Acciojob  to  You (direct message) 15:30
+// Team Acciojob  to  You (direct message) 15:30
 //your JS code here. If required.
 const username=document.getElementById("username");
 const password=document.getElementById("password");
