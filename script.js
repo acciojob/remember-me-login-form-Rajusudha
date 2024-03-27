@@ -2,32 +2,10 @@
 
 
 
-Today
+// Today
 
-Team Acciojob  to  You (direct message) 15:29
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-	<!-- the entire body must be written by student -->
-	<h1>Login Form</h1>
-	<form onsubmit="handleSubmit()">
-		<label for="username">Username:</label>
-	<input placeholder="Username" id="username" type="text"/>
-		<label for="password">Password:</label>
-		
-	<input placeholder="password" id="password" type="password"/>
-	<input id="checkbox" type="checkbox"/>
-	<label for="checkbox">Remember me:</label>
-	<input id="submit" type="submit" value="Submit" />
-	<button id="existing" type="submit"  hidden >Login as existing user</button>
-	</form>
-    <script type="text/javascript" src="./script.js">
-</script>
-</body>
-</html>
+// Team Acciojob  to  You (direct message) 15:29
+
 Messages addressed to "Meeting Group Chat" will also appear in the meeting group chat in Team Chat
 
 Team Acciojob  to  You (direct message) 15:30
